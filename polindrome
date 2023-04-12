@@ -1,0 +1,16 @@
+function checkPalindrome(string) {
+
+    const convert = string.toString();
+    const arrayValues = convert.split('');
+    const reverseArrayValues = arrayValues.reverse();
+    const reverseString = reverseArrayValues.join('');
+
+    if(string == reverseString) {
+        console.log(true,`explanation: ${string} read as ${reverseString} from left to right and from right to left `);
+    }
+    else {
+        console.log(false, `from left to right, it reads ${string} from right to left ${reverseString} there it is not palindrome `);
+    }
+}
+
+console.log(checkPalindrome(121))
